@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menús de Cocinas Económicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Menús de Cocinas Económicas</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Buscar menús...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+    
+    <main>
+        <section class="menu-list">
+            <article class="menu-item">
+                <h2>Cocina Económica 1</h2>
+                <p>Menú del día:</p>
+                <ul>
+                    <li>Entrada: Sopa de verduras</li>
+                    <li>Plato Principal: Pollo al horno con papas</li>
+                    <li>Postre: Flan de vainilla</li>
+                </ul>
+                <p>Precio: $XX.XX</p>
+                <p class="description">Una deliciosa combinación de sabores caseros...</p>
+                <a href="#">Ver más detalles</a>
+            </article>
+
+            <article class="menu-item">
+                <h2>Cocina Económica 2</h2>
+                <p>Menú del día:</p>
+                <ul>
+                    <li>Entrada: Ensalada fresca</li>
+                    <li>Plato Principal: Lasaña de carne</li>
+                    <li>Postre: Tiramisú</li>
+                </ul>
+                <p>Precio: $YY.YY</p>
+                <p class="description">Una experiencia culinaria única...</p>
+                <a href="#">Ver más detalles</a>
+            </article>
+
+            <!-- Agrega más artículos según sea necesario -->
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Menús de Cocinas Económicas PWA</p>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch((error) => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+        }
+    </script>
+</body>
+</html>
